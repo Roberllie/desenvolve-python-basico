@@ -1,0 +1,5 @@
+1. Leia e armazene um valor n #entrada
+2. subtraia 1 de n e depois multiplique por 10 e armazene #processamento
+3. subtraia n de 9 e armazene #processamento
+4. some o primeiro resultado com o segundo #processamento 
+5. apresente a soma e finalize #saida 
