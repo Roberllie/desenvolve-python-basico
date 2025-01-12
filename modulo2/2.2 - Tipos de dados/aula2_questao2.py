@@ -1,11 +1,10 @@
-v1 = 5
-v2 = 10
-print ("v1: ", v1)
-print ("v2: ", v2)
+texto = "O resultado é "
+num1 = 10
+num2 = 3.5 
 
-troca = v1
-v1 = v2
-v2 = troca
+num3 = num1 + num2
 
-print ("v1: ", v1)
-print ("v2: ", v2)
+print(texto, type(texto))
+print(num1, type(num1))
+print(num2, type(num2))
+print(num3, type(num3))
