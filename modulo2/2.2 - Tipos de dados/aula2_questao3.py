@@ -1,8 +1,9 @@
-saldo = 500.0
-juros = 1.01
+v1 = 10
+v2 = 20
 
-saldo = saldo * juros  
-saldo = saldo * juros  
-saldo = saldo * juros  
+aux = v1 
+v1 = v2
+v2 = aux 
 
-print("Novo saldo:", saldo)
+print("O valor de v1 é ",v1)
+print("O valor de v2 é ",v2)
