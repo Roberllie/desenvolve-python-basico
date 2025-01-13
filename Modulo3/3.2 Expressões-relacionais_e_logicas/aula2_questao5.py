@@ -1,18 +1,23 @@
+#Solicite de um usuário seu gênero ("M" ou "F"), sua idade e seu tempo de serviço (em anos) e escreva uma 
+# expressão que imprima True se a pessoa já pode se aposentar, ou False caso contrário, de acordo com as 
+# seguintes regras:
+#A: Para mulheres, ter mais de 60 anos. Para homens, 65.
+#B: Ou ter trabalhado pelo menos 30 anos
+#C: Ou ter 60 anos  e trabalhado pelo menos 25.
 
-genero = input("Informe seu gênero (M ou F): ").upper()
+genero = input("Genero(f/m): ")
+idade = int(input("Idade: "))
+tempo = int(input("Tempo de serviço: "))
+aposentar = False
 
-idade = int(input("Informe sua idade: "))
+if (idade >= 60 and tempo >= 25):
+    aposentar = True
 
-tempo_servico = int(input("Informe seu tempo de serviço (em anos): "))
+elif genero == 'm':
+    aposentar = bool(idade > 60)
 
-if genero == "F":
-    criterio_a = idade > 60
-else:
-    criterio_a = idade > 65
 
-criterio_b = tempo_servico >= 30
-criterio_c = idade >= 60 and tempo_servico >= 25
+elif genero == 'f':
+    aposentar = bool(idade > 65 or tempo >= 30)
 
-aposentadoria = criterio_a or criterio_b or criterio_c
-
-print(aposentadoria)
+print(f"Aposentar: {aposentar}")
