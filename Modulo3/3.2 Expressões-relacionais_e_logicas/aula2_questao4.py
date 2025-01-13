@@ -1,27 +1,33 @@
+#Guerreiro: Força deve ser igual ou superior a 15, Magia deve ser 10 ou menos.
+#Mago: Força deve ser 10 ou menos, Magia deve ser igual ou superior a 15.
+#Arqueiro: Força e Magia devem ser ambos superiores a 5, mas nenhum deles pode ser superior a 15.
+#Escolha a classe (guerreiro, mago ou arqueiro): mago
 
-idade = int(input("Digite sua idade: "))
+#Digite os pontos de força (de 1 a 20): 8
 
-classe = input("Escolha a classe (guerreiro, mago ou arqueiro): ").lower()
+#Digite os pontos de magia (de 1 a 20): 17
+
+#Pontos de atributo consistentes com a classe escolhida: True
+
+classe = input("Escolha a classe (guerreiro, mago ou arqueiro): ")
 
 forca = int(input("Digite os pontos de força (de 1 a 20): "))
 
 magia = int(input("Digite os pontos de magia (de 1 a 20): "))
 
+consistente = False 
 
-if classe == "guerreiro":
-    forca_valida = forca >= 15
-    magia_valida = magia <= 10
-    atributos_validos = forca_valida and magia_valida
-elif classe == "mago":
-    forca_valida = forca <= 10
-    magia_valida = magia >= 15
-    atributos_validos = forca_valida and magia_valida
-elif classe == "arqueiro":
-    forca_valida = 5 < forca <= 15
-    magia_valida = 5 < magia <= 15
-    atributos_validos = forca_valida and magia_valida
-else:
-    atributos_validos = False
+if (classe == 'guerreiro'):
+        consistente = bool((forca >= 15 and magia <= 10))
+
+elif (classe == 'mago'):
+    consistente = bool((magia >= 15 and forca <= 10))
+
+elif (classe == 'arqueiro'):
+    consistente = bool((magia >= 5 and magia >= 15 and forca >= 5 and forca <= 15))
+
+print(f"Pontos de atributo consistentes com a classe escolhida: {consistente}")
 
 
-print(f"Pontos de atributo consistentes com a classe escolhida: {atributos_validos}")
+
+
