@@ -1,14 +1,8 @@
 import random
 import math
-
-n = int(input("Digite o valor de n: "))
-
+n = int(input("Qtd de números: "))
 soma = 0
+for i in range(n):
+    soma += random.randint(0,100)
 
-for _ in range(n):
-    valor = random.randint(0, 100)
-    soma += valor
-
-raiz_quadrada = math.sqrt(soma)
-
-print(f"A raiz quadrada da soma dos {n} valores é: {raiz_quadrada}")
+print(f"A raiz quadrada dos {n} números informados é {math.sqrt(soma)}")
