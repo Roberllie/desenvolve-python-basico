@@ -1,13 +1,10 @@
-import random
+import random 
 
-num_elementos = random.randint(5, 20)
+num_elementos = (random.randint(5,20))
 
-elementos = [random.randint(1, 10) for _ in range(num_elementos)]
+for i in range(num_elementos):
+    elementos.append(random.randint(1,10))
 
-print("Lista elementos:", elementos)
-
-soma = sum(elementos)
-print("Soma dos valores:", soma)
-
-media = soma / len(elementos)
-print("Média dos valores:", media)
+print(elementos)
+print(sum(elementos))
+print(soma/len(elementos))
