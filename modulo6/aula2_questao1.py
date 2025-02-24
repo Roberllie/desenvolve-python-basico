@@ -1,13 +1,14 @@
 import random
+lista =[]
 
-lista = [random.randint(-100, 100) for _ in range(20)]
+for i in range(20):
+    lista.append(random.randint(-100,100))
 
-lista_ordenada = sorted(lista)
-print("Lista ordenada:", lista_ordenada)
+maximo = max(lista)
+minimo = min(lista)
 
-print("Lista original:", lista)
 
-indice_maior = lista.index(max(lista))
-indice_menor = lista.index(min(lista))
-print("Índice do maior valor:", indice_maior)
-print("Índice do menor valor:", indice_menor)
+print(sorted(lista)) ##imprime a lista em ordem sem modificá-la, com a função embutida sorted 
+print(lista)
+print(f"O índice do maior número é {lista.index(maximo)} que é {maximo}")
+print(f"O índice do menor número é {lista.index(minimo)} que é {minimo}")
