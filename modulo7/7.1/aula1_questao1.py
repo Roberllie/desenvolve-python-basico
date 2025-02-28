@@ -1,5 +1,7 @@
 nome = input("Digite seu nome: ")
 
-for i in range(1, len(nome) + 1):
-    print(nome[:i])
+letras = ""
 
+for letra in nome:
+    letras+= letra 
+    print(letras)
