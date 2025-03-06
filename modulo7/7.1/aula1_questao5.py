@@ -1,12 +1,11 @@
 frase = input("Digite uma frase: ")
+vogais= 0
+vogais_index = []
 
-contador_vogais = 0
-indices_vogais = []
+for i in range(len(frase)):
+    if frase[i] in 'aeiou':
+        vogais = vogais + 1
+        vogais_index.append(i)
 
-for idx, letra in enumerate(frase):
-    if letra.lower() in "aeiou":
-        contador_vogais += 1
-        indices_vogais.append(idx)
-
-print(f"{contador_vogais} vogais")
-print(f"Índices {indices_vogais}")
+print(vogais)
+print(f"Indices: {vogais_index}")
