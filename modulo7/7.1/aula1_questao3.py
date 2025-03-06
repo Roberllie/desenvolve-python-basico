@@ -1,5 +1,9 @@
-frase = input("Digite a frase: ")
+##Escreva um script que dado uma frase conta os espaços em branco.
 
-espacos_em_branco = frase.count(' ')
+frase = input("Digite uma frase: ")
+espacos = 0
+for i in frase:
+    if i == ' ': 
+        espacos = espacos + 1 
 
-print(f"Espaços em branco: {espacos_em_branco}")
+print("Espaços em branco: ", espacos)
